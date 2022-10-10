@@ -2,41 +2,26 @@ import React from "react";
 import { MatchContainer } from "../StyledComponents/StyledComponents";
 import Player from "../Player";
 
-const Match = ({ players, isHighlighted, hovered, unhovered }) => {
-  let [playerOne, playerTwo, matchId] = [0, 0, 0];
-
-  if (players) {
-    [playerOne, playerTwo, matchId] = players.players;
-  }
+const Match = ({ matchId, players, isHighlighted, hovered, unhovered }) => {
+  const activePlayers = players && players.length ? players : [null, null];
 
   return (
     <MatchContainer data-id={matchId}>
-      <Player
-        highlighted={
-          isHighlighted.status &&
-          playerOne.playerOne._id !== isHighlighted.playerId
-            ? "true"
-            : "false"
-        }
-        hovered={players && hovered}
-        unhovered={unhovered}
-        playerInfo={players && playerOne.playerOne}
-        winner={players && playerOne.score > playerTwo.score ? 1 : 0}
-        playerScore={players && playerOne.score}
-      />
-      <Player
-        highlighted={
-          isHighlighted.status &&
-          playerTwo.playerTwo._id !== isHighlighted.playerId
-            ? "true"
-            : "false"
-        }
-        unhovered={unhovered}
-        hovered={players && hovered}
-        playerInfo={players && playerTwo.playerTwo}
-        winner={players && playerOne.score < playerTwo.score ? 1 : 0}
-        playerScore={players && playerTwo.score}
-      />
+      {activePlayers.map((player, index) => (
+        <Player
+          key={index}
+          highlighted={
+            isHighlighted.status && player?.data._id !== isHighlighted.playerId
+              ? "true"
+              : "false"
+          }
+          hovered={players && hovered}
+          unhovered={unhovered}
+          playerInfo={players && player?.data}
+          winner={players && player?.winner ? 1 : 0}
+          playerScore={players && player?.score}
+        />
+      ))}
     </MatchContainer>
   );
 };

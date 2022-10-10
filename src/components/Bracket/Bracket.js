@@ -2,21 +2,21 @@ import React from "react";
 import { BracketContainer } from "../StyledComponents/StyledComponents";
 import Match from "../Match";
 
-const Bracket = ({ players, semi, isHighlighted, hovered, unhovered }) => {
+const Bracket = ({ matches, semi, isHighlighted, hovered, unhovered }) => {
+  const activeMatches = matches && matches.length ? matches : [null, null];
+
   return (
     <BracketContainer semi={semi}>
-      <Match
-        isHighlighted={isHighlighted}
-        hovered={hovered}
-        unhovered={unhovered}
-        players={players && players[0]}
-      />
-      <Match
-        isHighlighted={isHighlighted}
-        hovered={hovered}
-        unhovered={unhovered}
-        players={players && players[1]}
-      />
+      {activeMatches.map((match, index) => (
+        <Match
+          key={index}
+          isHighlighted={isHighlighted}
+          hovered={hovered}
+          unhovered={unhovered}
+          players={match?.players}
+          matchId={match?._id}
+        />
+      ))}
     </BracketContainer>
   );
 };

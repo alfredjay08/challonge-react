@@ -136,6 +136,7 @@ export const PlayerContainer = styled.div`
   }
 
   display: flex;
+  cursor: pointer;
 
   ${(props) =>
     props.highlighted === "true" &&

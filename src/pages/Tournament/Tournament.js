@@ -105,16 +105,18 @@ const Tournament = () => {
       const playerTwo = players.find(({ _id }) => match.players[1]._id === _id);
 
       return {
+        _id: match._id,
         players: [
           {
-            playerOne,
+            data: playerOne,
             score: match.players[0].score,
+            winner: match.players[0].score > match.players[1].score,
           },
           {
-            playerTwo,
+            data: playerTwo,
             score: match.players[1].score,
+            winner: match.players[0].score < match.players[1].score,
           },
-          match._id,
         ],
       };
     });
@@ -142,13 +144,13 @@ const Tournament = () => {
         <StageContainer>
           <Bracket
             isHighlighted={isHighlighted}
-            players={matches.length ? getMatchData(matches.slice(0, 2)) : []}
+            matches={matches.length ? getMatchData(matches.slice(0, 2)) : []}
             hovered={handlerPlayerHover}
             unhovered={handlerPlayerMouseOut}
           />
           <Bracket
             isHighlighted={isHighlighted}
-            players={matches.length ? getMatchData(matches.slice(2, 4)) : []}
+            matches={matches.length ? getMatchData(matches.slice(2, 4)) : []}
             hovered={handlerPlayerHover}
             unhovered={handlerPlayerMouseOut}
           />
@@ -156,7 +158,7 @@ const Tournament = () => {
         <StageContainer>
           <Bracket
             isHighlighted={isHighlighted}
-            players={matches.length ? getMatchData(matches.slice(4, 6)) : []}
+            matches={matches.length ? getMatchData(matches.slice(4, 6)) : []}
             hovered={handlerPlayerHover}
             unhovered={handlerPlayerMouseOut}
             semi="semi"
@@ -165,7 +167,10 @@ const Tournament = () => {
         <StageContainer final>
           <Match
             isHighlighted={isHighlighted}
-            players={matches.length ? getMatchData(matches.slice(6))[0] : null}
+            matchId={7}
+            players={
+              matches.length ? getMatchData(matches.slice(6))[0]?.players : null
+            }
             hovered={handlerPlayerHover}
             unhovered={handlerPlayerMouseOut}
           />
