@@ -2,7 +2,13 @@ import React from "react";
 import { MatchContainer } from "../StyledComponents/StyledComponents";
 import Player from "../Player";
 
-const Match = ({ matchId, players, isHighlighted, hovered, unhovered }) => {
+const Match = ({
+  matchId,
+  players,
+  isHighlighted = false,
+  hovered,
+  unhovered,
+}) => {
   const activePlayers = players && players.length ? players : [null, null];
 
   return (

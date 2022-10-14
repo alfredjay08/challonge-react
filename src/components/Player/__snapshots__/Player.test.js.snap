@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders when there are incorrect props 1`] = `
+<div
+  className="sc-jSUZER hFnVAg"
+  onMouseOver={[Function]}
+>
+  <div
+    className="sc-gKPRtg jAzlAk"
+  >
+    <img
+      alt="Player Icon"
+      src="/uploads/ninja-yellow.jpg"
+      style={
+        Object {
+          "borderRadius": "50%",
+          "width": "20px",
+        }
+      }
+    />
+  </div>
+  <div
+    className="sc-gKPRtg fOrJSf"
+  />
+  <div
+    className="sc-gKPRtg jLsyYQ"
+  >
+    <span />
+  </div>
+</div>
+`;
+
+exports[`renders when there are no props 1`] = `
+<div
+  className="sc-jSUZER hFnVAg"
+  onMouseOver={[Function]}
+>
+  <div
+    className="sc-gKPRtg jAzlAk"
+  >
+    <img
+      alt="Player Icon"
+      src="/uploads/ninja-yellow.jpg"
+      style={
+        Object {
+          "borderRadius": "50%",
+          "width": "20px",
+        }
+      }
+    />
+  </div>
+  <div
+    className="sc-gKPRtg fOrJSf"
+  />
+  <div
+    className="sc-gKPRtg jLsyYQ"
+  >
+    <span />
+  </div>
+</div>
+`;

@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders when passed wrong properties 1`] = `
+<div
+  className="sc-eDvSVe LqqaX"
+>
+  <div
+    className="sc-jSUZER hFnVAg"
+    onMouseOver={[Function]}
+  >
+    <div
+      className="sc-gKPRtg jAzlAk"
+    >
+      <img
+        alt="Player Icon"
+        src="/uploads/ninja-yellow.jpg"
+        style={
+          Object {
+            "borderRadius": "50%",
+            "width": "20px",
+          }
+        }
+      />
+    </div>
+    <div
+      className="sc-gKPRtg fOrJSf"
+    />
+    <div
+      className="sc-gKPRtg jLsyYQ"
+    >
+      <span />
+    </div>
+  </div>
+  <div
+    className="sc-jSUZER hFnVAg"
+    onMouseOver={[Function]}
+  >
+    <div
+      className="sc-gKPRtg jAzlAk"
+    >
+      <img
+        alt="Player Icon"
+        src="/uploads/ninja-yellow.jpg"
+        style={
+          Object {
+            "borderRadius": "50%",
+            "width": "20px",
+          }
+        }
+      />
+    </div>
+    <div
+      className="sc-gKPRtg fOrJSf"
+    />
+    <div
+      className="sc-gKPRtg jLsyYQ"
+    >
+      <span />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders when there are no props 1`] = `
+<div
+  className="sc-eDvSVe LqqaX"
+>
+  <div
+    className="sc-jSUZER hFnVAg"
+    onMouseOver={[Function]}
+  >
+    <div
+      className="sc-gKPRtg jAzlAk"
+    >
+      <img
+        alt="Player Icon"
+        src="/uploads/ninja-yellow.jpg"
+        style={
+          Object {
+            "borderRadius": "50%",
+            "width": "20px",
+          }
+        }
+      />
+    </div>
+    <div
+      className="sc-gKPRtg fOrJSf"
+    />
+    <div
+      className="sc-gKPRtg jLsyYQ"
+    >
+      <span />
+    </div>
+  </div>
+  <div
+    className="sc-jSUZER hFnVAg"
+    onMouseOver={[Function]}
+  >
+    <div
+      className="sc-gKPRtg jAzlAk"
+    >
+      <img
+        alt="Player Icon"
+        src="/uploads/ninja-yellow.jpg"
+        style={
+          Object {
+            "borderRadius": "50%",
+            "width": "20px",
+          }
+        }
+      />
+    </div>
+    <div
+      className="sc-gKPRtg fOrJSf"
+    />
+    <div
+      className="sc-gKPRtg jLsyYQ"
+    >
+      <span />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders when there are one player 1`] = `
+<div
+  className="sc-eDvSVe LqqaX"
+>
+  <div
+    className="sc-jSUZER hFnVAg"
+    onMouseOver={[Function]}
+  >
+    <div
+      className="sc-gKPRtg jAzlAk"
+    >
+      <img
+        alt="Player Icon"
+        src="/uploads/ninja-yellow.jpg"
+        style={
+          Object {
+            "borderRadius": "50%",
+            "width": "20px",
+          }
+        }
+      />
+    </div>
+    <div
+      className="sc-gKPRtg fOrJSf"
+    >
+      Alfred Jay
+    </div>
+    <div
+      className="sc-gKPRtg zysMT"
+    >
+      <span>
+        5
+      </span>
+    </div>
+  </div>
+</div>
+`;

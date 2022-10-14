@@ -3,11 +3,11 @@ import { PlayerContainer, Column } from "../StyledComponents/StyledComponents";
 
 const Player = ({
   playerInfo,
-  winner,
   playerScore,
+  winner = false,
   hovered,
   unhovered,
-  highlighted,
+  highlighted = false,
 }) => {
   const imgStyle = {
     width: "20px",
